@@ -1,0 +1,21 @@
+{application, erlluminate,
+ [{description, "An OTP application"},
+  {vsn, "0.1.0"},
+  {registered, [serv, requester]},
+  {mod, { erlluminate_app, []}},
+  {applications,
+   [kernel,
+    stdlib,
+    jiffy
+   ]},
+  {env,
+   [{light_num, "the id number of your light from the hue API"},
+    {api_user, "your user id for the hue API"},
+    {bridge_ip, "the ip address of your hue bridge device"}]
+  },
+  {modules, [erlluminate, erlluminate_sup, erlluminate_serv]},
+
+  {maintainers, []},
+  {licenses, []},
+  {links, []}
+ ]}.
